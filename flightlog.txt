@@ -1,0 +1,44 @@
+1561317249.85: Sleeping: 0.25
+1561317250.13: Awake
+1561317250.13: Send command: command
+1561317250.20: Response: b'ok'
+1561317250.20: Sleeping: 0.25
+1561317250.45: Awake
+1561317250.45: Send command: speed 20
+1561317250.50: Response: b'ok'
+1561317250.50: Sleeping: 0.25
+1561317250.75: Awake
+1561317250.75: Send command: takeoff
+1561317258.11: Response: b'ok'
+1561317258.11: Sleeping: 0.25
+1561317258.37: Awake
+1561317258.37: Send command: tof?
+1561317258.42: Response: b'796mm\r\n'
+1561317258.42: Sleeping: 0.25
+1561317258.67: Awake
+1561317258.67: Send command: baro?
+1561317258.72: Response: b'3.711635\r\n'
+1561317258.72: Sleeping: 0.25
+1561317258.97: Awake
+1561317258.97: Send command: tof?
+1561317259.02: Response: b'791mm\r\n'
+1561317259.02: Sleeping: 0.25
+1561317259.27: Awake
+1561317259.27: Send command: down 59
+1561317263.14: Response: b'ok'
+1561317263.15: Sleeping: 0.25
+1561317263.40: Awake
+1561317263.40: Send command: tof?
+1561317263.45: Response: b'300mm\r\n'
+1561317263.45: Sleeping: 0.25
+1561317263.70: Awake
+1561317263.70: Send command: baro?
+1561317263.75: Response: b'2.927411\r\n'
+1561317263.75: Sleeping: 0.25
+1561317264.00: Awake
+1561317264.00: Send command: forward 100
+1561317269.64: Response: b'ok'
+1561317269.64: Sleeping: 0.25
+1561317269.90: Awake
+1561317269.90: Send command: land
+1561317271.30: Response: b'ok'
