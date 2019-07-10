@@ -1,52 +1,50 @@
 from djitellopy import Tello
-import time
+
+def flybox(tello):
+    tello.takeoff()
+    for i in range (4):
+        tello.move_forward(60)
+        tello.rotate_clockwise(90)
+    tello.land()
+
+def stacked_box(tello):
+    tello.takeoff()
+    tello.
+    for j in range (3):
+        for i in range (4):
+            tello.move_forward(60)
+            tello.rotate_clockwise(90)
+        tello.move_up(20)
+    tello.land()
+
+def adjusted_height(tello):
+    tello.takeoff()
+    print("Altitude: %s; Barometer: %s" % (tello.get_distance_tof(), tello.get_barometer()))
+
+    height = tello.get_distance_tof()
+    print("height: ", height)
+    distance = height - 20
+    print("distance: ", distance)
+    tello.move_down(distance)
+
+    print("Altitude: %s; Barometer: %s" % (tello.get_distance_tof(), tello.get_barometer()))
+    tello.move_forward(100)
+    tello.rotate_clockwise(180)
+    tello.move_forward(100)
+    tello.land()
+
 
 def main():
     # Init Tello object that interacts with the Tello drone
     tello = Tello()
-
-    if not tello.connect():
-        print("Tello not connected")
-        return
-
     tello.set_speed(20)
 
     try:
-
-        tello.takeoff()
-#        for i in range (4):
-#        tello.move_right(60)
-#        tello.move_up(30)
-#        tello.rotate_counter_clockwise(90)
-        print("Altitude: %s; Barometer: %s" %(tello.get_distance_tof(), tello.get_barometer()))
-
-        height = tello.get_distance_tof()
-        print("height: ", height)
-        distance = height - 20
-        print("distance: ", distance)
-        tello.move_down(distance)
-
-        print("Altitude: %s; Barometer: %s" %(tello.get_distance_tof(), tello.get_barometer()))
-        tello.move_forward(100)
-
-        tello.land()
+        flybox(tello)
 
     except Exception as e:
-        print ("Caught exception.  Attempting to land.")
         print(e)
-        # This will loop until the drone lands.
-        emergency_land(tello)
-
-
-def emergency_land(tello):
-    while True:
-        try:
-            if tello.land():
-                return
-        except Exception as e:
-            print("Exception caught; trying to land again.")
-            print(e)
-        time.sleep(2)
+        tello.emergency_land()
 
 if __name__ == '__main__':
     main()

@@ -45,6 +45,21 @@ class Tello:
         thread.daemon = True
         thread.start()
 
+        if not self.connect():
+            raise Exception("Tello not connected")
+
+    def emergency_land(self):
+        print ("Caught exception.  Attempting to land.")
+
+        while True:
+            try:
+                if self.land():
+                    return
+            except Exception as e:
+                print("Exception caught; trying to land again.")
+                print(e)
+            time.sleep(2)
+
     def write_log_message(self, msg):
         self.log.write("%.2f: %s\n" %(time.time(), msg))
         self.log.flush()
