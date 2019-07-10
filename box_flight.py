@@ -9,7 +9,6 @@ def flybox(tello):
 
 def stacked_box(tello):
     tello.takeoff()
-    tello.
     for j in range (3):
         for i in range (4):
             tello.move_forward(60)

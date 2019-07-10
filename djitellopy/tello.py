@@ -18,6 +18,7 @@ class Tello:
     RESPONSE_TIMEOUT = 20  # in seconds
     TIME_BTW_COMMANDS = 0.25  # in seconds
     TIME_BTW_RC_CONTROL_COMMANDS = 0.25  # in seconds
+    DEBUG_OUTPUT = True
     last_received_command = time.time()
 
     # Video stream, server socket
@@ -119,6 +120,10 @@ class Tello:
             self.write_log_message("Awake")
 
         self.write_log_message('Send command: ' + command)
+
+        if self.DEBUG_OUTPUT:
+            self.write_log_message('Send command: ' + command)
+
         timestamp = time.time()
 
         self.clientSocket.sendto(command.encode('utf-8'), self.address)
@@ -166,6 +171,9 @@ class Tello:
         # Commands very consecutive makes the drone not respond to them. So wait at least self.TIME_BTW_COMMANDS seconds
 
         self.write_log_message('Send command (no expect response): ' + command)
+        if self.DEBUG_OUTPUT:
+            self.write_log_message('Send command: ' + command)
+
         self.clientSocket.sendto(command.encode('utf-8'), self.address)
 
     @accepts(command=str)

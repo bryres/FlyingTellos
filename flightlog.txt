@@ -1,44 +1,46 @@
-1561317249.85: Sleeping: 0.25
-1561317250.13: Awake
-1561317250.13: Send command: command
-1561317250.20: Response: b'ok'
-1561317250.20: Sleeping: 0.25
-1561317250.45: Awake
-1561317250.45: Send command: speed 20
-1561317250.50: Response: b'ok'
-1561317250.50: Sleeping: 0.25
-1561317250.75: Awake
-1561317250.75: Send command: takeoff
-1561317258.11: Response: b'ok'
-1561317258.11: Sleeping: 0.25
-1561317258.37: Awake
-1561317258.37: Send command: tof?
-1561317258.42: Response: b'796mm\r\n'
-1561317258.42: Sleeping: 0.25
-1561317258.67: Awake
-1561317258.67: Send command: baro?
-1561317258.72: Response: b'3.711635\r\n'
-1561317258.72: Sleeping: 0.25
-1561317258.97: Awake
-1561317258.97: Send command: tof?
-1561317259.02: Response: b'791mm\r\n'
-1561317259.02: Sleeping: 0.25
-1561317259.27: Awake
-1561317259.27: Send command: down 59
-1561317263.14: Response: b'ok'
-1561317263.15: Sleeping: 0.25
-1561317263.40: Awake
-1561317263.40: Send command: tof?
-1561317263.45: Response: b'300mm\r\n'
-1561317263.45: Sleeping: 0.25
-1561317263.70: Awake
-1561317263.70: Send command: baro?
-1561317263.75: Response: b'2.927411\r\n'
-1561317263.75: Sleeping: 0.25
-1561317264.00: Awake
-1561317264.00: Send command: forward 100
-1561317269.64: Response: b'ok'
-1561317269.64: Sleeping: 0.25
-1561317269.90: Awake
-1561317269.90: Send command: land
-1561317271.30: Response: b'ok'
+1562791317.16: Sleeping: 0.25
+1562791317.41: Awake
+1562791317.41: Send command: command
+1562791317.46: Response: b'ok'
+1562791317.46: Sleeping: 0.25
+1562791317.71: Awake
+1562791317.71: Send command: speed 20
+1562791317.76: Response: b'ok'
+1562791317.76: Sleeping: 0.25
+1562791318.02: Awake
+1562791318.02: Send command: takeoff
+1562791323.49: Response: b'ok'
+1562791323.49: Sleeping: 0.25
+1562791323.74: Awake
+1562791323.74: Send command: forward 60
+1562791327.08: Response: b'ok'
+1562791327.08: Sleeping: 0.25
+1562791327.33: Awake
+1562791327.33: Send command: cw 90
+1562791329.36: Response: b'ok'
+1562791329.36: Sleeping: 0.25
+1562791329.61: Awake
+1562791329.61: Send command: forward 60
+1562791332.73: Response: b'ok'
+1562791332.73: Sleeping: 0.25
+1562791332.98: Awake
+1562791332.98: Send command: cw 90
+1562791335.17: Response: b'ok'
+1562791335.17: Sleeping: 0.25
+1562791335.42: Awake
+1562791335.42: Send command: forward 60
+1562791338.54: Response: b'ok'
+1562791338.54: Sleeping: 0.25
+1562791338.79: Awake
+1562791338.79: Send command: cw 90
+1562791341.08: Response: b'ok'
+1562791341.08: Sleeping: 0.25
+1562791341.33: Awake
+1562791341.33: Send command: forward 60
+1562791344.82: Response: b'ok'
+1562791344.82: Sleeping: 0.25
+1562791345.07: Awake
+1562791345.07: Send command: cw 90
+1562791365.08: Timeout exceed on command cw 90
+1562791365.08: Send command: land
+1562791382.37: Response: b'ok'
